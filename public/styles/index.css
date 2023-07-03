@@ -1,0 +1,103 @@
+@import "./fonts.css";
+
+* {
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+}
+body {
+    font-family: Poppins,system-ui,-apple-s ystem,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 17px;
+    color: #fff;
+    min-height: 100vh;
+}
+/*
+    Navigation
+*/
+nav {
+    font-size: 18px;
+    color: #000;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #e7e7e7;
+    width: 100%;
+    height: 120px;
+    display: flex;
+}
+nav .wrap {
+    padding: 16px;
+    display: flex;
+    width: 100%;
+}
+nav .wrap div {
+    text-align: center;
+    width: 100%;
+}
+nav .links {
+    margin-left: 0px;
+}
+nav .links a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    margin-right: 20px;
+}
+nav .buttons {
+    display: flex;
+    width: 100%;
+}
+nav .buttons a {
+    text-decoration: none;
+    margin-right: 20px;
+}
+nav .download {
+    max-width: 300px;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    
+    border-radius: 999px;
+    padding: 10px;
+    background-color: #fff;
+    color: #3d0cff;
+    text-decoration: none;
+}
+nav .discord {
+    color: #000;
+    border-radius: 999px;
+    padding: 10px;
+    border: 1px solid white;
+    width: 100%;
+    background-color: transparent;
+}
+/*
+    Header
+*/
+header {
+    min-height: 100vh;
+    background-color: rgb(21, 22, 28);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+header h1 {
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+/*
+    Main
+*/
+main {
+    width: 100%;
+    max-width: 50em;
+    color: #000;
+    margin-top: 200px;
+}
+main h1, h2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}

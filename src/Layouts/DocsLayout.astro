@@ -1,0 +1,21 @@
+---
+import Navigation from "../components/Navigation.astro"
+
+const { frontmatter } = Astro.props
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenFrog: {frontmatter.title}</title>
+	<link rel="stylesheet" href="/styles/index.css">
+	<link rel="icon" href="/greenfrog.webp">
+</head>
+<body>
+	<Navigation />
+    <main>
+        <slot />
+    </main>
+</body>
+</html>
