@@ -6,5 +6,9 @@
     {
         "name": "Gettting Started",
         "href": "/docs/getting-started"
+    },
+    {
+        "name": "Plugins",
+        "href": "/docs/plugins"
     }
 ]
