@@ -69,12 +69,44 @@ header h1 {
     margin-bottom: 40px;
 }
 /*
+    Wrapper
+*/
+.wrap {
+    width: 100%;
+    max-width: 70em;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+/*
+    Aside
+*/
+aside {
+    margin-top: 180px;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 250px;
+    padding: 26px;
+    height: 100vh;
+    text-align: start;
+}
+aside a {
+    width: 100%;
+    text-align: start;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+/*
     Main
 */
 main {
+    margin-left: 0px;
     width: 100%;
-    max-width: 50em;
-    margin-top: 200px;
+    max-width: 45em;
+    margin-top: 150px;
 }
 main h1, h2 {
     margin-top: 40px;

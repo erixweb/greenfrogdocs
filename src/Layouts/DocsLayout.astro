@@ -1,5 +1,6 @@
 ---
 import Navigation from "../components/Navigation.astro"
+import json from "../stores/docs.json"
 
 const { frontmatter } = Astro.props
 ---
@@ -35,8 +36,17 @@ const { frontmatter } = Astro.props
 </head>
 <body>
 	<Navigation />
-    <main>
-        <slot />
-    </main>
+    <div class="wrap">
+        <aside>
+                {json.map(item => (
+                    <a href={item.href}>
+                        {item.name}
+                    </a>
+                ))}
+        </aside>
+        <main>
+            <slot />
+        </main>
+    </div>
 </body>
 </html>

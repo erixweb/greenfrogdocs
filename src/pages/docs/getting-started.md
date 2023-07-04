@@ -18,7 +18,7 @@ If you're using `pnpm` run this command:
 pnpm install
 ```
 
-# Start the sefver
+# Start the server
 
 If you're using `npm`:
 ```
