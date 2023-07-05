@@ -82,7 +82,7 @@ header h1 {
 /*
     Wrapper
 */
-.wrap {
+.wrapper {
     width: 100%;
     max-width: 70em;
     display: grid;
