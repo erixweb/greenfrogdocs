@@ -10,5 +10,9 @@
     {
         "name": "Plugins",
         "href": "/docs/plugins"
+    },
+    {
+        "name": "Player Health",
+        "href": "/docs/api/setHealth"
     }
 ]
