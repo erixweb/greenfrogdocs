@@ -12,14 +12,22 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with: 
+          version: 8
 
       # Not using npm? Change `npm ci` to `yarn install` or `pnpm i`
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install
 
       # Not using npm? Change `npm run build` to `yarn build` or `pnpm run build`
       - name: Build Astro
-        run: npm run build
+        run: pnpm build
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
