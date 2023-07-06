@@ -14,5 +14,9 @@
     {
         "name": "Player Health",
         "href": "/docs/api/setHealth"
+    },
+    {
+        "name": "Player Teleport",
+        "href": "/docs/api/teleport"
     }
 ]
