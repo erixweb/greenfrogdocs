@@ -18,5 +18,9 @@
     {
         "name": "Player Teleport",
         "href": "/docs/api/teleport"
+    },
+    {
+        "name": "Player Speed",
+        "href": "/docs/api/setSpeed"
     }
 ]
