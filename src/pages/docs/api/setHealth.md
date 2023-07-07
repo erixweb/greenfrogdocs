@@ -17,8 +17,8 @@ Player's setHealth function requires atleast 1 argument and up to 2 arguments. `
 
 ```
 player.setHealth(
-    health // number from 0 to 20
-    cause // string "unknown" | "fall_damage" | "regeneration" | "void" | "plugin"
+    health: Number // number from 0 to 20
+    cause: String // string "unknown" | "fall_damage" | "regeneration" | "void" | "plugin"
 )
 ```
 
