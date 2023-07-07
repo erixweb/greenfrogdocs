@@ -1,6 +1,6 @@
 ---
 layout: "../../../Layouts/DocsLayout.astro"
-title: "Player teleport"
+title: "Player setSpeed"
 ---
 
 # player.setSpeed
