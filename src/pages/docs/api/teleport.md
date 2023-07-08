@@ -32,7 +32,7 @@ const playerSpawnEvent = (event, Frog) => {
 
 module.exports = {
     onLoad () {
-        Frog.eventEmitter.on("playerSpawn", (..args) => { playerSpawnEvent(...args, Frog) }) // Detect when player spawns and pass the arguments.
+        Frog.eventEmitter.on("playerSpawn", (...args) => { playerSpawnEvent(...args, Frog) }) // Detect when player spawns and pass the arguments.
     }
 }
 ```

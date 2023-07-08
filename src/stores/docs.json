@@ -22,5 +22,9 @@
     {
         "name": "Player Speed",
         "href": "/docs/api/setSpeed"
+    },
+    {
+        "name": "Player Hunger",
+        "href": "/docs/api/setHunger"
     }
 ]
