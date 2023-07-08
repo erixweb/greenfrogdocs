@@ -13,7 +13,10 @@ GreenFrog provides an easy way to update the player's hunger using `setHunger`. 
 Here's a summary:
 
 ```
-player.setHunger = function (health, cause = "unknown") {}
+player.setHunger = function (
+    health: Number, // number from 0 up to 20
+    cause: String = "unknown" // string 'normal' | 'plugin' | 'unknown'
+)
 ```
 
 # Plugin example
