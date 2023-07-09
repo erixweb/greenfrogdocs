@@ -46,11 +46,14 @@ const { frontmatter } = Astro.props
 	<Navigation/>
     <div class="wrapper">
         <aside>
-                {json.map(item => (
-                    <a href={item.href}>
-                        {item.name}
-                    </a>
-                ))}
+                {
+                    json
+                        .map(item => (
+                            <a href={item.href}>
+                                {item.name}
+                            </a>
+                        ))
+                }
         </aside>
         <main>
             <slot />

@@ -14,7 +14,6 @@ player.setHealth = function (health, cause = DamageCause.UNKNOWN) {}
 ```
 
 Player's setHealth function requires atleast 1 argument and up to 2 arguments. `Health` is the required argument, it can be a number from 0 up to 20. Then, `cause` argument can be a string with these values: `unknown`, `fall_damage`, `regeneration`, `void` and `plugin`
-
 ```
 player.setHealth(
     health: Number // number from 0 to 20
