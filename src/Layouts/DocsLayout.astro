@@ -11,8 +11,11 @@ const { frontmatter } = Astro.props
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenFrog: {frontmatter.title}</title>
 	<link rel="icon" href="/greenfrog.webp">
+    <script src="/js/views.js" defer></script>
     <script src="/js/highlight.js" defer></script>
 	<link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
     <style is:inline>
         code {
             padding: 6px;
@@ -33,8 +36,6 @@ const { frontmatter } = Astro.props
         }
         code[class*=language-],pre[class*=language-]{color:#9efeff;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;hyphens:none;font-family:Operator Mono,Fira Code,Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-weight:400;font-size:17px;line-height:25px;letter-spacing:.5px;text-shadow:0 1px #222245}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{color:inherit;background:#a599e9}code[class*=language-] ::-moz-selection,code[class*=language-] ::selection,code[class*=language-]::-moz-selection,code[class*=language-]::selection,pre[class*=language-] ::-moz-selection,pre[class*=language-] ::selection,pre[class*=language-]::-moz-selection,pre[class*=language-]::selection{color:inherit;background:#a599e9}pre[class*=language-]{padding:2em;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#25252d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em}.token{font-weight:400}.token.cdata,.token.comment,.token.prolog{color:#b362ff}.token.atrule,.token.builtin,.token.delimiter,.token.doctype,.token.important,.token.keyword,.token.selector,.token.tag,.token.tag .punctuation{color:#ff9d00}.token.attr-name,.token.operator{color:#ffb454}.token.punctuation{color:#fff}.token.boolean,.token.constant,.token.number,.token.property,.token.variable{color:#ff628c}.token.entity,.token.symbol{color:#6897bb}.token.char,.token.string{color:#a5ff90}.token.attr-value,.token.attr-value .punctuation{color:#a5c261}.token.attr-value .punctuation:first-child,code.language-css .token.property,code.language-css .token.property+.token.punctuation{color:#a9b7c6}.token.url{color:#287bde;text-decoration:underline}.token.function{color:#fad000}.token.regex{background:#364135}.token.bold{font-weight:700}.token.italic{font-style:italic}.token.inserted{background:#0f0}.token.deleted{background:#ff000d}code.language-css .token.id,code.language-css .token.selector>.token.attribute,code.language-css .token.selector>.token.class,code.language-css .token.selector>.token.pseudo-class,code.language-css .token.selector>.token.pseudo-element{color:#ffc66d}.token.class-name{color:#fb94ff}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:0 0}.line-highlight.line-highlight{margin-top:36px;background:linear-gradient(90deg,rgba(98, 101, 255, 0.17),transparent)}.line-highlight.line-highlight:before,.line-highlight.line-highlight[data-end]:after{content:""}
     </style>
-</head>
-<body>
 	<Navigation/>
     <div class="wrapper">
         <aside>

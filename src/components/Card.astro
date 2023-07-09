@@ -1,0 +1,38 @@
+---
+interface Props {
+    title: string
+    desc: string
+    type: "feature" | "document" 
+    href?: `/docs/${string}`
+}
+
+const {
+    title,
+    desc,
+    type,
+    href
+} = Astro.props
+---
+{type === "feature" ?
+    <div class="card">
+        <div class="content">
+            <h3>
+                {title}
+            </h3>
+            <p>
+                {desc}
+            </p>
+        </div>
+    </div>
+    :
+    <a href={`${href}`} class="card">
+        <div class="content">
+            <h3>
+                {title}
+            </h3>
+            <p>
+                {desc}
+            </p>
+        </div>
+    </a>
+}

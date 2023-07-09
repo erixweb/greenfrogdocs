@@ -1,4 +1,5 @@
 ---
+import Card from "../components/Card.astro";
 import Header from "../components/Header.astro"
 import Navigation from "../components/Navigation.astro"
 
@@ -9,8 +10,9 @@ import Navigation from "../components/Navigation.astro"
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenFrog: Minecraft Software</title>
-	<link rel="stylesheet" href="styles/index.css">
 	<link rel="icon" href="/greenfrog.webp">
+    <script src="/js/views.js" defer></script>
+	<link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
 	<Navigation />
@@ -19,33 +21,28 @@ import Navigation from "../components/Navigation.astro"
         <h1>
             Features
         </h1>
-        <div class="cards">
-            <div class="card">
-                <div class="image">
-                    <img src="/greenfrogbg.webp" alt="">
-                </div>
-                <div class="content">
-                    <h3>
-                        Speed
-                    </h3>
-                    <p>
-                        Start your server with GreenFrog in less than a second.
-                    </p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="/greenfrogbg.webp" alt="">
-                </div>
-                <div class="content">
-                    <h3>
-                        Vanilla gameplay
-                    </h3>
-                    <p>
-                        GreenFrog provides all the features you see in vanilla Minecraft.
-                    </p>
-                </div>
-            </div>
+        <div class="docs-cards">
+
+        </div>
+        <div class="feature-cards">
+            <Card 
+                title="Performance"
+                desc="GreenFrog provides a fast experience using the bedrock-protocol and a stable code built form scratch."
+                type="feature"
+            />
+            <Card 
+                title="Vanilla Gameplay"
+                desc="You can take advantage of the Minecraft Vanilla gameplay without coding it."
+                type="feature"
+            />
+        </div>
+        <div class="docs-cards">
+            <Card 
+                title="Installation"
+                desc="Guide on how to install GreenFrog step by step."
+                type="document"
+                href="/docs/installation"
+            />
         </div>
     </main>
 </body>

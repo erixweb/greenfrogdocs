@@ -7,6 +7,7 @@
     word-wrap: break-word;
     word-break: break-word;
 }
+
 body {
     font-family: Poppins, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
     font-size: 17px;
@@ -14,6 +15,7 @@ body {
     min-height: 100vh;
     background-color: rgb(42, 44, 57);
 }
+
 .warning {
     position: absolute;
     top: 0px;
@@ -24,6 +26,7 @@ body {
     text-align: center;
     z-index: 999999;
 }
+
 /*
     Navigation
 */
@@ -39,33 +42,40 @@ nav {
     margin-top: 0px;
     z-index: 99999;
 }
+
 nav .wrap {
     padding: 16px;
     display: flex;
     width: 100%;
     max-width: 50rem;
 }
+
 nav .images {
     margin-left: 0px;
 }
+
 nav .images img {
     transition: 350ms;
     margin-left: 0px;
     width: 48px;
     height: 48px;
 }
+
 nav .images img:active {
     transform: scale(1.1);
 }
+
 nav .links {
     margin-right: 0px;
 }
+
 nav .links a {
     font-weight: 500;
     text-decoration: none;
     color: #fff;
     margin-right: 20px;
 }
+
 /*
     Header
 */
@@ -81,14 +91,17 @@ header {
     align-items: center;
     text-align: center;
 }
+
 header h1 {
     font-size: 50px;
     margin-bottom: 40px;
 }
+
 header img {
     width: 100%;
     max-width: 400px;
 }
+
 /*
     Wrapper
 */
@@ -100,6 +113,7 @@ header img {
     padding-bottom: 40px;
     line-height: 1.7;
 }
+
 /*
     Aside
 */
@@ -113,6 +127,7 @@ aside {
     padding: 26px;
     text-align: start;
 }
+
 aside a {
     width: 100%;
     text-align: start;
@@ -121,6 +136,7 @@ aside a {
     text-decoration: none;
     color: #fff;
 }
+
 /*
     Main
 */
@@ -130,53 +146,100 @@ main {
     padding: 10px;
     margin-top: 120px;
 }
+
 .wrapper main {
     width: 100%;
     max-width: 45em;
     margin-left: 0px;
 }
-main h1, h2 {
+
+main h1,
+h2 {
     margin-top: 40px;
     margin-bottom: 40px;
     text-align: center;
 }
-main a {
+
+.wrapper main a {
     color: orange;
 }
+
 main p {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.cards {
+
+.feature-cards,
+.docs-cards {
+    color: #fff;
+    text-decoration: none;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
+    gap: 20px;
 }
-.card {
+
+.feature-cards .card,
+.docs-cards .card {
+    margin-top: 0px;
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
     border-radius: 15px;
     background-color: rgb(21, 22, 29);
-    margin-left: 0px;
-    width: 100%;
-    max-width: 400px;
 }
-.card .content {
-    padding: 1em;
-}
-.card img {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    object-fit: cover;
-    width: 100%;
-    height: 200px;
-}
+
 @media (max-width: 1000px) {
     .wrapper {
         display: block;
     }
+
     .wrapper main {
         margin-left: auto;
     }
+
     aside {
         display: none;
     }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-out {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes slide-from-right {
+    from {
+        transform: translateY(30px);
+    }
+}
+
+@keyframes slide-to-left {
+    to {
+        transform: translateY(-30px);
+    }
+}
+
+::view-transition-old(root) {
+    animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+        300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+}
+
+::view-transition-new(root) {
+    animation: 210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+        300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
 }
