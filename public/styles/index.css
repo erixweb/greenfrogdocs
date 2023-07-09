@@ -4,6 +4,8 @@
     margin: auto;
     padding: auto;
     box-sizing: border-box;
+    word-wrap: break-word;
+    word-break: break-word;
 }
 body {
     font-family: Poppins, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
@@ -28,7 +30,7 @@ body {
 nav {
     background-color: rgba(42, 44, 57, 0.774);
     font-size: 18px;
-    position: sticky;
+    position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -68,12 +70,11 @@ nav .links a {
     Header
 */
 header {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     min-height: 100vh;
     background: url("/greenfrogbg.webp");
+    background-size: cover;
+    background-position: center center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -124,11 +125,15 @@ aside a {
     Main
 */
 main {
-    margin-left: 0px;
+    width: 100%;
+    max-width: 50em;
+    padding: 10px;
+    margin-top: 120px;
+}
+.wrapper main {
     width: 100%;
     max-width: 45em;
-    padding: 10px;
-    margin-top: 150px;
+    margin-left: 0px;
 }
 main h1, h2 {
     margin-top: 40px;
@@ -141,4 +146,37 @@ main a {
 main p {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+.cards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.card {
+    border-radius: 15px;
+    background-color: rgb(21, 22, 29);
+    margin-left: 0px;
+    width: 100%;
+    max-width: 400px;
+}
+.card .content {
+    padding: 1em;
+}
+.card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+@media (max-width: 1000px) {
+    .wrapper {
+        display: block;
+    }
+    .wrapper main {
+        margin-left: auto;
+    }
+    aside {
+        display: none;
+    }
 }
