@@ -3,7 +3,7 @@ interface Props {
     title: string
     desc: string
     type: "feature" | "document" 
-    href?: `/docs/${string}`
+    href?: `${string}`
 }
 
 const {
@@ -31,7 +31,7 @@ const {
                 {title}
             </h3>
             <p>
-                {desc}
+                {desc || "No description avalible for this document"}
             </p>
         </div>
     </a>

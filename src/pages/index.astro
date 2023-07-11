@@ -2,7 +2,7 @@
 import Card from "../components/Card.astro";
 import Header from "../components/Header.astro"
 import Navigation from "../components/Navigation.astro"
-
+import docs from "../stores/docs.json"
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -19,11 +19,23 @@ import Navigation from "../components/Navigation.astro"
     <Header />
     <main>
         <h1>
-            Features
+            Documentation
         </h1>
         <div class="docs-cards">
-
+            {
+                docs.map(doc => (
+                    <Card 
+                        title={doc.name}
+                        desc={doc.desc}
+                        type="document"
+                        href={doc.href}
+                    />
+                ))
+            }
         </div>
+        <h1>
+            Features
+        </h1>
         <div class="feature-cards">
             <Card 
                 title="Performance"
@@ -35,54 +47,13 @@ import Navigation from "../components/Navigation.astro"
                 desc="You can take advantage of the Minecraft Vanilla gameplay without coding it."
                 type="feature"
             />
-        </div>
-        <h1>
-            Documentation
-        </h1>
-        <div class="docs-cards">
             <Card 
-                title="Installation"
-                desc="Guide on how to install GreenFrog step by step."
-                type="document"
-                href="/docs/installation"
-            />
-            <Card 
-                title="Getting Started"
-                desc="Create your first Minecraft Server."
-                type="document"
-                href="/docs/getting-started"
-            />
-            <Card 
-                title="Plugins"
-                desc="Creating your first plugin with the basic events..."
-                type="document"
-                href="/docs/plugins"
-            />
-            <Card 
-                title="Health"
-                desc="Change the player health."
-                type="document"
-                href="/docs/api/setHealth"
-            />
-            <Card 
-                title="Teleport"
-                desc="Teleport the player wherever you want."
-                type="document"
-                href="/docs/api/teleport"
-            />
-            <Card 
-                title="Speed"
-                desc="Make the player go faster"
-                type="document"
-                href="/docs/api/setSpeed"
-            />
-            <Card 
-                title="Hunger"
-                desc="Make the player starve or give it infinite food."
-                type="document"
-                href="/docs/api/setHunger"
+                title="Type Safe"
+                desc="By default, GreenFrog isn't type safe, but you can make it type safe by following the documentation steps using TypeScript."
+                type="feature"
             />
         </div>
+        
     </main>
 </body>
 </html>

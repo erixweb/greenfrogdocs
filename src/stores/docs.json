@@ -1,38 +1,47 @@
 [
     {
         "name": "Installation",
-        "href": "/docs/installation"
+        "href": "/docs/installation",
+        "desc": "Guide on how to install GreenFrog step by step."
     },
     {
         "name": "Gettting Started",
-        "href": "/docs/getting-started"
+        "href": "/docs/getting-started",
+        "desc": "Create your first Minecraft Server."
     },
     {
         "name": "Types (Optional)",
-        "href": "/docs/types"
+        "href": "/docs/types",
+        "desc": "Read this document if you want to use TypeScript"
     },
     {
         "name": "Plugins",
-        "href": "/docs/plugins"
+        "href": "/docs/plugins",
+        "desc": "Creating your first plugin with the basic events..."
     },
     {
         "name": "Player Health",
-        "href": "/docs/api/setHealth"
+        "href": "/docs/api/setHealth",
+        "desc": "Change the player health."
     },
     {
         "name": "Player Teleport",
-        "href": "/docs/api/teleport"
+        "href": "/docs/api/teleport",
+        "desc": "Teleport the player wherever you want."
     },
     {
         "name": "Player Speed",
-        "href": "/docs/api/setSpeed"
+        "href": "/docs/api/setSpeed",
+        "desc": "Make the player go faster"
     },
     {
         "name": "Player Hunger",
-        "href": "/docs/api/setHunger"
+        "href": "/docs/api/setHunger",
+        "desc": "Make the player starve or give it infinite food."
     },
     {
         "name": "Player Gamemode",
-        "href": "/docs/api/setGamemode"
+        "href": "/docs/api/setGamemode",
+        "desc": "Change the player gamemode."
     }
 ]
