@@ -12,7 +12,7 @@ GreenFrog provides an easy way to update the player's hunger using `setHunger`. 
 
 Here's a summary:
 
-```
+```ts
 player.setHunger = function (
     health: Number, // number from 0 up to 20
     cause: String = "unknown" // string 'normal' | 'plugin' | 'unknown'
@@ -23,10 +23,13 @@ player.setHunger = function (
 
 Here, we'll detect each time a player moves and decrease its hunger by 1.
 
-```
-const playerMoveEvent = (event) => {
+```ts
+// IPlayer in 
+import type { IPlayer } from "./types.d.ts"
+
+const playerMoveEvent = (event: any) => {
     // Get the player that moved
-    const player = event.player
+    const player: IPlayer = event.player
 
     // Decrease player's hunger by 1
     player.setHunger(player.hunger - 1) 
@@ -35,7 +38,7 @@ const playerMoveEvent = (event) => {
 module.exports = {
     onLoad () {
         // Execute playerMoveEvent function each time player moves
-        Frog.eventEmitter.on("playerMove", (...args) => { playerMoveEvent(...args, Frog) })
+        Frog.eventEmitter.on("playerMove", (...args: any) => { playerMoveEvent(...args, Frog) })
     }
 }
 ```

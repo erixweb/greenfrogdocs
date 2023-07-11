@@ -9,7 +9,7 @@ To set someone's gamemode you must use setGamemode. It takes one argument and it
 
 Here's a summary:
 
-```
+```ts
 type GamemodesType = 'survival' | 'creative' | 'adventure' | 'spectator' | 'fallback'
 
 player.setGamemode = function (
@@ -19,16 +19,18 @@ player.setGamemode = function (
 
 # Plugin example
 
-```
-const playerSpawnEvent = (event) => {
-    const player = event.player
+```ts
+import type { IPlayer } from "./types.d.ts"
+
+const playerSpawnEvent = (event: any) => {
+    const player: IPlayer = event.player
 
     player.setGamemode("survival")
 }
 
 module.exports = {
     onLoad () {
-        Frog.eventEmitter.on((...args) => { playerSpawnEvent(...args, Frog) })
+        Frog.eventEmitter.on((...args: any) => { playerSpawnEvent(...args, Frog) })
     }
 }
 ```

@@ -8,6 +8,10 @@
         "href": "/docs/getting-started"
     },
     {
+        "name": "Types (Optional)",
+        "href": "/docs/types"
+    },
+    {
         "name": "Plugins",
         "href": "/docs/plugins"
     },

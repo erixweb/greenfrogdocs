@@ -17,7 +17,7 @@ After that, go to this directory and run `npm run plugin-structure`. Then enter 
 
 Although greenfrog's development experience is really fast, there's a bit of boilerplate. Let's get started:
 
-```
+```js
 const Frog = require("../../src/Frog")
 
 module.exports = {
@@ -31,7 +31,7 @@ module.exports = {
 
 For our basic plugin we'll do a plugin that logs `"My plugin has loaded"` when the server loads and `"My plugin shut down"` when the server shuts down.
 
-```
+```js
 const Frog = require("../../src/Frog")
 const Logger = require("../../src/server/Logger");
 
