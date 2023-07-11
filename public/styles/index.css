@@ -244,6 +244,28 @@ main p {
 .card .content, .card .images {
     margin-left: 0px;
 }
+/*
+    Contributors
+*/
+.contributor-card {
+    color: #fff;
+    text-decoration: none;
+    padding: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.contributor-card img, .contributor-card h3 {
+    width: 100%;
+}
+.contributor-card h3 {
+    margin-left: 2.5em;
+}
+.contributor-card img {
+    width: 48px;
+    height: 48px;
+    border-radius: 999999px;
+}
 
 @media (max-width: 1000px) {
     .wrapper {

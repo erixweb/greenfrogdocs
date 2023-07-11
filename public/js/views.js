@@ -37,3 +37,32 @@ window.navigation.addEventListener("navigate", (event) => {
     },
   })
 })
+const Lazy = target => {
+  const io = new IntersectionObserver((entries, observer) => {
+      entries.forEach(async entry => {
+          if (entry.isIntersecting) {
+            const req = await fetch(
+              "https://api.github.com/repos/andriycraft/GreenFrogMCBE/contributors"
+            )
+            const contributors = await req.json()
+            let DOMUpdate = ""
+
+            contributors.forEach(contributor => {
+              DOMUpdate += `
+                <a href="https://github.com/${contributor.login}" target="_blank" class="contributor-card" rel="nofollow">
+                  <img src="${contributor.avatar_url}" alt="${contributor.login}'s github profile picture">
+                  <h3>
+                    ${contributor.login}
+                  </h3>
+                </a>
+              `
+            })
+
+            document.querySelector(".github-contributors").innerHTML = DOMUpdate
+          }
+      })
+  })
+  io.observe(target)
+}
+
+document.querySelectorAll(".github-contributors").forEach(Lazy)
