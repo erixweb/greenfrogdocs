@@ -1,20 +1,12 @@
 ---
+import Layout from "../Layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Header from "../components/Header.astro"
 import Navigation from "../components/Navigation.astro"
 import docs from "../stores/docs.json"
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenFrog: Minecraft Software</title>
-	<link rel="icon" href="/greenfrog.webp">
-    <script src="/js/views.js" defer></script>
-	<link rel="stylesheet" href="styles/index.css">
-</head>
-<body>
+
+<Layout>
 	<Navigation />
     <Header />
     <main>
@@ -55,5 +47,4 @@ import docs from "../stores/docs.json"
         </div>
         
     </main>
-</body>
-</html>
+</Layout>
