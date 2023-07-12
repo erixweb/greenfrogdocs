@@ -127,3 +127,11 @@ This type can is used internally when using player.setHealth() method
 ```ts
 export type DamageCause = "unknown" | "fall_damage" | "regeneration" | "void" | "plugin"
 ```
+
+# Hunger Cause Type
+
+This type is used internally when using player.setHunger() method
+
+```ts
+export type HungerCause = 'normal' | 'plugin' | 'unknown'
+```

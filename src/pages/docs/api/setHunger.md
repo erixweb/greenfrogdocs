@@ -13,9 +13,11 @@ GreenFrog provides an easy way to update the player's hunger using `setHunger`. 
 Here's a summary:
 
 ```ts
+import type { HungerCause } from './types.d.ts'
+
 player.setHunger = function (
     health: Number, // number from 0 up to 20
-    cause: String = "unknown" // string 'normal' | 'plugin' | 'unknown'
+    cause?: HungerCause = "unknown" // string 'normal' | 'plugin' | 'unknown'
 )
 ```
 

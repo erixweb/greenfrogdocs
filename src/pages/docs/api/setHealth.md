@@ -17,9 +17,12 @@ player.setHealth = function (health: string, cause: CauseType = DamageCause.UNKN
 
 Player's setHealth function requires atleast 1 argument and up to 2 arguments. `Health` is the required argument, it can be a number from 0 up to 20. Then, `cause` argument can be a string with these values: `unknown`, `fall_damage`, `regeneration`, `void` and `plugin`
 ```ts
+import type { DamageCause } from './types.d.ts'
+
+
 player.setHealth(
     health: Number // number from 0 to 20
-    cause?: CauseType // string "unknown" | "fall_damage" | "regeneration" | "void" | "plugin"
+    cause?: DamageCause // string "unknown" | "fall_damage" | "regeneration" | "void" | "plugin"
 )
 ```
 
