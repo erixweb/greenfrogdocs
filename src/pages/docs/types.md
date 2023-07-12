@@ -119,3 +119,11 @@ module.exports = {
     }
 }   
 ```
+
+# Damage Cause Type
+
+This type can is used internally when using player.setHealth() method
+
+```ts
+export type DamageCause = "unknown" | "fall_damage" | "regeneration" | "void" | "plugin"
+```
