@@ -135,3 +135,11 @@ This type is used internally when using player.setHunger() method
 ```ts
 export type HungerCause = 'normal' | 'plugin' | 'unknown'
 ```
+
+# Gamemodes Type
+
+Used internally in the player.setGamemode() method
+
+```ts
+export type Gamemodes = 'survival' | 'creative' | 'adventure' | 'spectator' | 'fallback'
+```

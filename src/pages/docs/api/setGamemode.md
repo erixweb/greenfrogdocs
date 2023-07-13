@@ -10,10 +10,10 @@ To set someone's gamemode you must use setGamemode. It takes one argument and it
 Here's a summary:
 
 ```ts
-type GamemodesType = 'survival' | 'creative' | 'adventure' | 'spectator' | 'fallback'
+import type { Gamemodes } from "./types.d.ts"
 
 player.setGamemode = function (
-    gamemode: GamemodesType
+    gamemode: Gamemodes
 ) {}
 ```
 
