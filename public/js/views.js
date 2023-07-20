@@ -51,9 +51,6 @@ const Lazy = target => {
               DOMUpdate += `
                 <a href="${contributor.html_url}" target="_blank" class="contributor-card" rel="nofollow">
                   <img src="${contributor.avatar_url}" alt="${contributor.login}'s github profile picture">
-                  <h3>
-                    ${contributor.login}
-                  </h3>
                 </a>
               `
             })
