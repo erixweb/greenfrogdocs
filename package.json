@@ -10,9 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/deno": "4.2.0",
-    "astro": "2.8.0",
-    "eslint": "^8.45.0",
-    "prettier": "3.0.0"
+    "@astrojs/deno": "4.3.0",
+    "astro": "2.10.5",
+    "eslint": "^8.46.0",
+    "prettier": "3.0.1"
   }
 }
