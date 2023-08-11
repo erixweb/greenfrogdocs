@@ -15,7 +15,17 @@ import docs from "../stores/docs.json"
         </h1>
         <div class="docs-cards">
             {
-                docs.map(doc => (
+                docs["nosection"].map(doc => (
+                    <Card 
+                        title={doc.name}
+                        desc={doc.desc}
+                        type="document"
+                        href={doc.href}
+                    />
+                ))
+            }
+            {
+                docs["api"].map(doc => (
                     <Card 
                         title={doc.name}
                         desc={doc.desc}
