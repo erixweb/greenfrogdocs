@@ -13,6 +13,19 @@ import "/public/styles/index.css"
         <link rel="preload" href="/fonts/poppins-bold2.woff2" as="font" type="font/woff2" crossorigin="">
         -->
         <script src="/js/views.js" defer></script>
+        <script defer>
+            const toggleSection = (element) => {
+                const allElements = document.querySelectorAll(element)
+    
+                allElements.forEach(el => {
+                    if (el.style.display === 'none') {
+                        el.style.display = 'flex'
+                    } else {
+                        el.style.display = 'none'
+                    }
+                })
+            }
+        </script>
     </head>
     <body>
         <slot />

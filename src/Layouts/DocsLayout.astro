@@ -18,8 +18,6 @@ const { frontmatter } = Astro.props
     <script src="/js/views.js" defer></script>
     <script src="/js/highlight.js" defer></script>
 	<link rel="stylesheet" href="/styles/index.css">
-</head>
-<body>
     <script defer>
         const toggleSection = (element) => {
             const allElements = document.querySelectorAll(element)
@@ -33,6 +31,8 @@ const { frontmatter } = Astro.props
             })
         }
     </script>
+</head>
+<body>
     <style is:inline>
         code {
             padding: 6px;
