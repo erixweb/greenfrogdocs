@@ -187,7 +187,9 @@ aside {
     text-align: start;
 }
 
-aside a {
+aside a, aside button {
+    cursor: pointer;
+    font-size: 17px;
     padding: 8px;
     border-radius: 7px;
     width: 100%;
@@ -197,8 +199,21 @@ aside a {
     text-decoration: none;
     color: #fff;
     transition: 250ms;
+    background-color: transparent;
+    border: none;
 }
-aside a:hover {
+aside button svg {
+    float: right;
+    color: rgb(157, 157, 157);
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    transition: 250ms;
+}
+aside button:hover svg {
+    rotate: 90deg;
+}
+aside a:hover, aside button:hover {
     background-color: rgb(57, 57, 68);
 }
 

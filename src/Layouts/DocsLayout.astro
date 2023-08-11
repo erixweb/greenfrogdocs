@@ -20,6 +20,19 @@ const { frontmatter } = Astro.props
 	<link rel="stylesheet" href="/styles/index.css">
 </head>
 <body>
+    <script defer>
+        const toggleSection = (element) => {
+            const allElements = document.querySelectorAll(element)
+
+            allElements.forEach(el => {
+                if (el.style.display === 'none') {
+                    el.style.display = 'flex'
+                } else {
+                    el.style.display = 'none'
+                }
+            })
+        }
+    </script>
     <style is:inline>
         code {
             padding: 6px;
@@ -44,9 +57,21 @@ const { frontmatter } = Astro.props
     <div class="wrapper">
         <aside>
                 {
-                    json
+                    json["nosection"]
                         .map(item => (
                             <a href={item.href} class={item.section}>
+                                {item.name}
+                            </a>
+                        ))
+                }
+                <button onclick="toggleSection('.api')">
+                    API
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="nx-h-[18px] nx-min-w-[18px] nx-rounded-sm nx-p-0.5 hover:nx-bg-gray-800/5 dark:hover:nx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="nx-origin-center nx-transition-transform rtl:-nx-rotate-180"></path></svg>
+                </button>
+                {
+                    json["api"]
+                        .map(item => (
+                            <a href={item.href} class={item.section} style="display: none">
                                 {item.name}
                             </a>
                         ))
