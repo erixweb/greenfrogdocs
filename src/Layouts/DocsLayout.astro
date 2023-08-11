@@ -11,7 +11,10 @@ const { frontmatter } = Astro.props
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenFrog: {frontmatter.title}</title>
 	<link rel="icon" href="/greenfrog.webp">
-    <link rel="preload" href="/assets/poppins-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <!--
+    <link rel="preload" href="/fonts/poppinsnormal.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="/fonts/poppins-bold2.woff2" as="font" type="font/woff2" crossorigin="">
+    -->
     <script src="/js/views.js" defer></script>
     <script src="/js/highlight.js" defer></script>
 	<link rel="stylesheet" href="/styles/index.css">
@@ -43,7 +46,7 @@ const { frontmatter } = Astro.props
                 {
                     json
                         .map(item => (
-                            <a href={item.href}>
+                            <a href={item.href} class={item.section}>
                                 {item.name}
                             </a>
                         ))

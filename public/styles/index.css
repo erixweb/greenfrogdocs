@@ -51,11 +51,11 @@
 }
 
 body {
-    font-family: Poppins, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
-    font-size: 17px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+    font-size: 18px;
     color: #fff;
     min-height: 100vh;
-    background-color: rgb(42, 44, 57);
+    background-color: rgb(22, 23, 28);
 }
 
 .warning {
@@ -73,23 +73,28 @@ body {
     Navigation
 */
 nav {
-    background-color: rgba(42, 44, 57, 0.774);
+    background-color: rgb(22, 23, 28);
+    border-bottom: 2px solid rgb(60, 60, 60);
     font-size: 18px;
     position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 100px;
+    min-height: 70px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 0px;
     z-index: 99999;
+    padding: 16px;
 }
 
 nav .wrap {
-    padding: 16px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    max-width: 50rem;
+    max-width: 65rem;
 }
 
 nav .images {
@@ -110,7 +115,19 @@ nav .images img:active {
 nav .links {
     margin-right: 0px;
 }
-
+nav .images a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    color: #fff;
+    text-decoration: none;
+    vertical-align: middle;
+}
+nav .images p {
+    font-weight: 800;
+    margin-left: 10px;
+}
 nav .links a {
     font-weight: 500;
     text-decoration: none;
@@ -160,7 +177,7 @@ header img {
     Aside
 */
 aside {
-    margin-top: 180px;
+    margin-top: 130px;
     margin-left: 0px;
     display: flex;
     flex-direction: column;
@@ -171,12 +188,18 @@ aside {
 }
 
 aside a {
+    padding: 8px;
+    border-radius: 7px;
     width: 100%;
     text-align: start;
     margin-top: 0px;
     margin-bottom: 20px;
     text-decoration: none;
     color: #fff;
+    transition: 250ms;
+}
+aside a:hover {
+    background-color: rgb(57, 57, 68);
 }
 
 /*
@@ -186,7 +209,7 @@ main {
     width: 100%;
     max-width: 50em;
     padding: 10px;
-    margin-top: 120px;
+    margin-top: 100px;
 }
 
 .wrapper main {
@@ -199,7 +222,7 @@ main h1,
 h2 {
     margin-top: 40px;
     margin-bottom: 40px;
-    text-align: center;
+    text-align: start;
 }
 
 .wrapper main a {
@@ -273,7 +296,14 @@ main p {
         display: none;
     }
 }
-
+@media (max-width: 550px) {
+    nav .images p {
+        display: none;
+    }
+    nav  a {
+        display: none;
+    }
+}
 @keyframes fade-in {
     from {
         opacity: 0;
@@ -300,10 +330,10 @@ main p {
 
 ::view-transition-old(root) {
     animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
-        300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+        200ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
 }
 
 ::view-transition-new(root) {
-    animation: 210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+    animation: 90ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
         300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
-}
+}   
