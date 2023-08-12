@@ -1,6 +1,7 @@
 ---
 layout: "../../Layouts/DocsLayout.astro"
 title: "Player Interface - TypeScript Only"
+section: 'none'
 ---
 
 # Player Interface (TS)

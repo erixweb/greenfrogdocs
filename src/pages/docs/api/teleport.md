@@ -1,6 +1,7 @@
 ---
 layout: "../../../Layouts/DocsLayout.astro"
 title: "Player teleport"
+section: 'api'
 ---
 
 # player.teleport

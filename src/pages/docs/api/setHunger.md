@@ -1,6 +1,7 @@
 ---
 layout: "../../../Layouts/DocsLayout.astro"
 title: "Player setHunger"
+section: 'api'
 ---
 
 # player.setHunger

@@ -1,6 +1,7 @@
 ---
 layout: "../../../Layouts/DocsLayout.astro"
 title: "Player setGamemode"
+section: 'api'
 ---
 
 # player.setGamemode

@@ -1,6 +1,7 @@
 ---
 layout: "../../../Layouts/DocsLayout.astro"
 title: "Player setHealth"
+section: 'api'
 ---
 
 # player.setHealth

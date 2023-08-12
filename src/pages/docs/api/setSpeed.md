@@ -1,6 +1,7 @@
 ---
 layout: "../../../Layouts/DocsLayout.astro"
 title: "Player setSpeed"
+section: 'api'
 ---
 
 # player.setSpeed

@@ -1,6 +1,7 @@
 ---
 layout: "../../Layouts/DocsLayout.astro"
 title: "Plugins"
+section: 'api'
 ---
 
 # Plugins
