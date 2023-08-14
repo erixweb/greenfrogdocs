@@ -1,7 +1,8 @@
 ---
 import Navigation from "../components/Navigation.astro"
 import json from "../stores/docs.json"
-
+import ViewTransitions from "astro/components/ViewTransitions.astro"
+import "../styles/index.css"
 const { frontmatter } = Astro.props
 ---
 <!DOCTYPE html>
@@ -15,22 +16,26 @@ const { frontmatter } = Astro.props
     <link rel="preload" href="/fonts/poppinsnormal.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="/fonts/poppins-bold2.woff2" as="font" type="font/woff2" crossorigin="">
     -->
-    <script src="/js/views.js" defer></script>
+    <!-- <script src="/js/views.js" defer></script> -->
     <script src="/js/highlight.js" defer></script>
-	<link rel="stylesheet" href="/styles/index.css">
     <script defer>
-        const toggleSection = (element) => {
-            const allElements = document.querySelectorAll(element)
+        document.addEventListener('astro:load', () => {
+            const toggleSection = (element) => {
+                const allElements = document.querySelectorAll(element)
 
-            allElements.forEach(el => {
-                if (el.style.display === 'none') {
-                    el.style.display = 'flex'
-                } else {
-                    el.style.display = 'none'
-                }
-            })
-        }
+                allElements.forEach(el => {
+                    if (el.style.display === 'none') {
+                        el.style.display = 'flex'
+                    } else {
+                        el.style.display = 'none'
+                    }
+                })
+            }
+            if (!document.querySelector('.apis')) return
+            document.querySelector('.apis').addEventListener('click', () => toggleSection('.api'))
+        })
     </script>
+    <ViewTransitions />
 </head>
 <body>
     <style is:inline>
@@ -55,7 +60,7 @@ const { frontmatter } = Astro.props
     </style>
 	<Navigation />
     <div class="wrapper">
-        <aside>
+        <aside transition:persist>
                 {
                     json["nosection"]
                         .map(item => (
@@ -64,14 +69,14 @@ const { frontmatter } = Astro.props
                             </a>
                         ))
                 }
-                <button onclick="toggleSection('.api')">
+                <button class="apis">
                     API
                     <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="nx-h-[18px] nx-min-w-[18px] nx-rounded-sm nx-p-0.5 hover:nx-bg-gray-800/5 dark:hover:nx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="nx-origin-center nx-transition-transform rtl:-nx-rotate-180"></path></svg>
                 </button>
                 {
                     json["api"]
                         .map(item => (
-                            <a href={item.href} class={item.section} style={frontmatter.section === 'none' ? "display: none" : "display: flex"}>
+                            <a href={item.href} class={item.section} style="none">
                                 {item.name}
                             </a>
                         ))
