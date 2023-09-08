@@ -2,7 +2,7 @@
 
 This repository provides documentation for the GreenFrog MCBE server software.
 
-# Read the docs
+# Documentation
 
 If you want to read the documentation, go to [greenfrog.deno.dev](https://greenfrog.deno.dev).
 
