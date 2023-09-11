@@ -13,7 +13,7 @@ const { frontmatter } = Astro.props
     <title>GreenFrog: {frontmatter.title}</title>
 	<link rel="icon" href="/greenfrog.webp">
     <script defer>
-        document.addEventListener('astro:load', () => {
+        document.addEventListener('astro:page-load', () => {
             const toggleSection = (element) => {
                 const allElements = document.querySelectorAll(element)
 
@@ -27,7 +27,7 @@ const { frontmatter } = Astro.props
             }
             if (!document.querySelector('.apis')) return
             document.querySelector('.apis').addEventListener('click', () => toggleSection('.api'))
-        })
+        }, { once: true })
     </script>
     <ViewTransitions />
 </head>
