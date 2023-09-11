@@ -138,31 +138,20 @@ nav .links a {
     margin-right: 20px;
 }
 
-/*
-    Header
-*/
-header {
+header::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background: url("/greenfrogbg.webp");
     background-size: cover;
     background-position: center center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    opacity: 0.75;
 }
 
-header h1 {
-    font-size: 50px;
-    margin-bottom: 40px;
-}
-
-header img {
-    width: 100%;
-    max-width: 400px;
-}
 
 /*
     Wrapper
