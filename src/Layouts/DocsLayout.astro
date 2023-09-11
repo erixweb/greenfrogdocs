@@ -43,9 +43,11 @@ const { frontmatter } = Astro.props
                             </a>
                         ))
                 }
-                <button class="apis">
-                    API
-                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="nx-h-[18px] nx-min-w-[18px] nx-rounded-sm nx-p-0.5 hover:nx-bg-gray-800/5 dark:hover:nx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="nx-origin-center nx-transition-transform rtl:-nx-rotate-180"></path></svg>
+                <button class="apis flex justify-center items-center w-full">
+                    <p class="w-full">
+                        API
+                    </p>
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="nx-h-[18px] nx-min-w-[18px] nx-rounded-sm nx-p-0.5 hover:nx-bg-gray-800/5 dark:hover:nx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </button>
                 {
                     json["api"]
@@ -56,7 +58,7 @@ const { frontmatter } = Astro.props
                         ))
                 }
         </aside>
-        <main>
+        <main class="documentation">
             <slot />
         </main>
     </div>
