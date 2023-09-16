@@ -1,5 +1,5 @@
 ---
-import ViewTransitions from "astro/components/ViewTransitions.astro";
+import { ViewTransitions } from "astro:transitions";
 import "../styles/index.css"
 ---
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ import "../styles/index.css"
         <title>GreenFrog: Minecraft Software</title>
         <link rel="icon" href="/greenfrog.webp">
         <script is:inline>
-            document.addEventListener('astro:load', () => {
+            document.addEventListener('astro:page-load', () => {
             const Lazy = target => {
                 const io = new IntersectionObserver((entries, observer) => {
                     entries.forEach(async entry => {

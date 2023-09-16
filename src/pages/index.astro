@@ -10,10 +10,10 @@ import docs from "../stores/docs.json"
 	<Navigation />
     <Header />
     <main>
-        <h1>
+        <h1 class="text-center text-[25px] font-bold">
             Documentation
         </h1>
-        <div class="docs-cards">
+        <div class="w-full grid grid-cols-2 gap-[20px] lg:grid-cols-1 lg:max-w-[500px]">
             {
                 docs["nosection"].map(doc => (
                     <Card 
@@ -35,10 +35,10 @@ import docs from "../stores/docs.json"
                 ))
             } 
         </div>
-        <h1>
+        <h1 class="text-center text-[25px] font-bold">
             Features
         </h1>
-        <div class="feature-cards">
+        <div class="grid grid-cols-2 gap-[20px] lg:grid-cols-1 lg:max-w-[500px]">
             <Card 
                 title="Performance"
                 desc="GreenFrog provides a fast experience using the bedrock-protocol and a stable code built form scratch."
@@ -50,10 +50,10 @@ import docs from "../stores/docs.json"
                 type="feature"
             />
         </div>
-        <h1>
+        <h1 class="text-center text-[25px] font-bold">
             Contributors
         </h1>
-        <div class="github-contributors" id="#contributors">
+        <div class="github-contributors flex flex-wrap max-w-[450px] pb-[30px] gap-[20px]" id="#contributors">
             <contributor-card>
                 <h2>Loading...</h2>
             </contributor-card>

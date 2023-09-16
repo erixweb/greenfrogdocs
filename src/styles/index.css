@@ -135,27 +135,18 @@ nav .links a {
     margin-right: 20px;
 }
 
-header {
+header::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background: url("/greenfrogbg.webp");
     background-size: cover;
     background-position: center center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 50px;
-    margin-bottom: 40px;
-}
-
-header img {
-    width: 100%;
-    max-width: 400px;
+    opacity: 0.75;
 }
 
 .wrapper {
@@ -231,59 +222,36 @@ h2 {
     text-align: start;
 }
 
-.wrapper main a {
-    color: orange;
-}
 
 main p {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
-.feature-cards,
-.docs-cards {
-    margin-top: 20px;
-    color: #fff;
-    text-decoration: none;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 20px;
+main.documentation h1 {
+    font-size: 25px;
+    font-weight: 800;
 }
-
-.feature-cards .card,
-.docs-cards .card {
-    text-align: start;
-    color: #fff;
-    text-decoration: none;
-    margin-top: 0px;
-    width: 100%;
-    height: 100%;
-    max-width: 400px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
+main.documentation p, li {
+    padding: 16px 0px 16px 0px;
+}
+main.documentation a {
+    color: orange;
+    text-decoration: underline;
+}
+main.documentation code {
+    color: rgb(119, 119, 255);
+}
+main.documentation pre {
     border-radius: 15px;
-    background-color: rgb(21, 22, 29);
+    padding: 12px;
 }
-.card .content, .card .images {
+
+.contributor-card {
     margin-left: 0px;
 }
 
-
-.github-contributors {
-    padding-bottom: 50px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
 .contributor-card img {
+    border: 2px solid rgb(63 63 70);
     width: 48px;
     height: 48px;
     border-radius: 999999px;
