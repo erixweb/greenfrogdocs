@@ -14,9 +14,9 @@ const {
 } = Astro.props
 ---
 {type === "feature" ?
-    <div class="card">
-        <div class="content">
-            <h3>
+    <div class="p-[1em] bg-zinc-800 rounded-[15px] w-full flex flex-col items-center justify-center border-zinc-700 border-[2px] duration-[250ms] hover:bg-zinc-700 hover:border-zinc-600 cursor-default h-full">
+        <div class="w-full">
+            <h3 class="text-[20px] font-bold">
                 {title}
             </h3>
             <p>
@@ -25,8 +25,8 @@ const {
         </div>
     </div>
     :
-    <a href={`${href}`} class="card">
-        <div class="content">
+    <a href={`${href}`} class="p-[1em] bg-zinc-800 rounded-[15px] w-full flex flex-col items-center justify-center border-zinc-700 border-[2px] duration-[250ms] hover:bg-zinc-700 hover:border-zinc-600 h-full">
+        <div class="w-full">
             <h3>
                 {title}
             </h3>
