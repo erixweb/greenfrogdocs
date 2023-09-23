@@ -10,6 +10,21 @@ import "../styles/index.css"
         <title>GreenFrog: Minecraft Software</title>
         <link rel="icon" href="/greenfrog.webp">
         <script is:inline>
+            document.addEventListener('astro:after-swap', () => {
+            const toggleSection = (element) => {
+                const allElements = document.querySelectorAll(element)
+
+                allElements.forEach(el => {
+                    if (el.style.display === 'none') {
+                        el.style.display = 'flex'
+                    } else {
+                        el.style.display = 'none'
+                    }
+                })
+            }
+            if (!document.querySelector('.apis')) return
+            document.querySelector('.apis').addEventListener('click', () => toggleSection('.api'))
+        }, { once: true })
             document.addEventListener('astro:page-load', () => {
             const Lazy = target => {
                 const io = new IntersectionObserver((entries, observer) => {

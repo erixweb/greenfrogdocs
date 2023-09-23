@@ -12,7 +12,7 @@ const { frontmatter } = Astro.props
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenFrog: {frontmatter.title}</title>
 	<link rel="icon" href="/greenfrog.webp">
-    <script defer>
+    <script is:inline>
         document.addEventListener('astro:page-load', () => {
             const toggleSection = (element) => {
                 const allElements = document.querySelectorAll(element)
