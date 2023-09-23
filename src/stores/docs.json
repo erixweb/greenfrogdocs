@@ -1,60 +1,60 @@
 {
-    "nosection": [
-        {
-            "name": "Installation",
-            "href": "/docs/installation",
-            "section": "installation",
-            "desc": "Guide on how to install GreenFrog step by step."
-        },
-        {
-            "name": "Gettting Started",
-            "href": "/docs/getting-started",
-            "section": "starting",
-            "desc": "Create your first Minecraft Server."
-        },
-        {
-            "name": "Types (Optional)",
-            "href": "/docs/types",
-            "section": "typescript",
-            "desc": "Read this document if you want to use TypeScript"
-        }
-    ],
-    "api": [
-        {
-            "name": "Plugins",
-            "href": "/docs/plugins",
-            "section": "api",
-            "desc": "Creating your first plugin with the basic events..."
-        },
-        {
-            "name": "Player Health",
-            "href": "/docs/api/setHealth",
-            "section": "api",
-            "desc": "Change the player health."
-        },
-        {
-            "name": "Player Teleport",
-            "href": "/docs/api/teleport",
-            "section": "api",
-            "desc": "Teleport the player wherever you want."
-        },
-        {
-            "name": "Player Speed",
-            "href": "/docs/api/setSpeed",
-            "section": "api",
-            "desc": "Make the player go faster"
-        },
-        {
-            "name": "Player Hunger",
-            "href": "/docs/api/setHunger",
-            "section": "api",
-            "desc": "Make the player starve or give it infinite food."
-        },
-        {
-            "name": "Player Gamemode",
-            "href": "/docs/api/setGamemode",
-            "section": "api",
-            "desc": "Change the player gamemode."
-        }
-    ]
+	"nosection": [
+		{
+			"name": "Installation",
+			"href": "/docs/installation",
+			"section": "installation",
+			"desc": "Guide on how to install GreenFrog step by step."
+		},
+		{
+			"name": "Gettting Started",
+			"href": "/docs/getting-started",
+			"section": "starting",
+			"desc": "Create your first Minecraft Server."
+		},
+		{
+			"name": "Types (Optional)",
+			"href": "/docs/types",
+			"section": "typescript",
+			"desc": "Read this document if you want to use TypeScript"
+		}
+	],
+	"api": [
+		{
+			"name": "Plugins",
+			"href": "/docs/plugins",
+			"section": "api",
+			"desc": "Creating your first plugin with the basic events..."
+		},
+		{
+			"name": "Player Health",
+			"href": "/docs/api/setHealth",
+			"section": "api",
+			"desc": "Change the player health."
+		},
+		{
+			"name": "Player Teleport",
+			"href": "/docs/api/teleport",
+			"section": "api",
+			"desc": "Teleport the player wherever you want."
+		},
+		{
+			"name": "Player Speed",
+			"href": "/docs/api/setSpeed",
+			"section": "api",
+			"desc": "Make the player go faster"
+		},
+		{
+			"name": "Player Hunger",
+			"href": "/docs/api/setHunger",
+			"section": "api",
+			"desc": "Make the player starve or give it infinite food."
+		},
+		{
+			"name": "Player Gamemode",
+			"href": "/docs/api/setGamemode",
+			"section": "api",
+			"desc": "Change the player gamemode."
+		}
+	]
 }
