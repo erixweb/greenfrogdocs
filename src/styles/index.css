@@ -72,9 +72,6 @@ html {
     z-index: 999999;
 }
 
-/*
-    Navigation
-*/
 nav {
     background-color: rgb(22, 23, 28);
     border-bottom: 2px solid rgb(60, 60, 60);
@@ -152,10 +149,6 @@ header::before {
     opacity: 0.75;
 }
 
-
-/*
-    Wrapper
-*/
 .wrapper {
     width: 100%;
     max-width: 70em;
@@ -165,9 +158,6 @@ header::before {
     line-height: 1.7;
 }
 
-/*
-    Aside
-*/
 aside {
     margin-top: 130px;
     margin-left: 0px;
@@ -194,6 +184,7 @@ aside a, aside button {
     background-color: transparent;
     border: none;
 }
+
 aside button svg {
     float: right;
     color: rgb(157, 157, 157);
@@ -202,16 +193,15 @@ aside button svg {
     height: 15px;
     transition: 250ms;
 }
+
 aside button:hover svg {
     rotate: 90deg;
 }
+
 aside a:hover, aside button:hover {
     background-color: rgb(57, 57, 68);
 }
 
-/*
-    Main
-*/
 main {
     width: 100%;
     max-width: 50em;
@@ -255,9 +245,11 @@ main.documentation pre {
     border-radius: 15px;
     padding: 12px;
 }
+
 .contributor-card {
     margin-left: 0px;
 }
+
 .contributor-card img {
     border: 2px solid rgb(63 63 70);
     width: 48px;

@@ -1,5 +1,5 @@
 ---
-import Layout from "../Layouts/Layout.astro";
+import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Header from "../components/Header.astro"
 import Navigation from "../components/Navigation.astro"
@@ -9,6 +9,7 @@ import docs from "../stores/docs.json"
 <Layout>
 	<Navigation />
     <Header />
+
     <main>
         <h1 class="text-center text-[25px] font-bold">
             Documentation
@@ -42,11 +43,6 @@ import docs from "../stores/docs.json"
             <Card 
                 title="Performance"
                 desc="GreenFrog provides a fast experience using the bedrock-protocol and a stable code built form scratch."
-                type="feature"
-            />
-            <Card 
-                title="Vanilla Gameplay"
-                desc="You can take advantage of the Minecraft Vanilla gameplay without coding it."
                 type="feature"
             />
             <Card 
