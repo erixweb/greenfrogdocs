@@ -10,23 +10,21 @@ import "../styles/index.css"
         <title>GreenFrog: Minecraft Software</title>
         <link rel="icon" href="/greenfrog.webp">
         <script is:inline>
-            if (!document.querySelector('.apis')) return
-            document.querySelector('.apis').addEventListener('click', () => toggleSection('.api'))
-            document.addEventListener('astro:page-load', () => {
+        document.addEventListener('astro:page-load', () => {
             const Lazy = target => {
                 const io = new IntersectionObserver((entries, observer) => {
                     entries.forEach(async entry => {
                         if (entry.isIntersecting) {
                             const req = await fetch(
-                            "https://api.github.com/repos/andriycraft/GreenFrogMCBE/contributors"
+                                "https://api.github.com/repos/andriycraft/GreenFrogMCBE/contributors"
                             )
                             const contributors = await req.json()
                             let DOMUpdate = ""
 
                             contributors.forEach(contributor => {
-                            DOMUpdate += `
+                                DOMUpdate += `
                                 <a href="${contributor.html_url}" target="_blank" class="contributor-card" rel="nofollow">
-                                <img src="${contributor.avatar_url}" alt="${contributor.login}'s github profile picture">
+                                        <img src="${contributor.avatar_url}" alt="${contributor.login}'s github profile picture">
                                 </a>
                             `
                             })
