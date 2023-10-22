@@ -52,7 +52,7 @@ const { frontmatter } = Astro.props
                 {
                     json["api"]
                         .map(item => (
-                            <a href={item.href} class={item.section} style="none">
+                            <a href={item.href} class={item.section} style="display: none">
                                 {item.name}
                             </a>
                         ))
