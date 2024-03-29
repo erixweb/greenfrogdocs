@@ -1,63 +1,49 @@
 ---
-import Layout from "../Layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Layout from "../Layouts/Layout.astro"
+import Card from "../components/Card.astro"
 import Header from "../components/Header.astro"
 import Navigation from "../components/Navigation.astro"
 import docs from "../stores/docs.json"
 ---
 
 <Layout>
-	<Navigation />
-    <Header />
+	<Header />
 
-    <main>
-        <h1 class="text-center text-[25px] font-bold">
-            Documentation
-        </h1>
-        <div class="w-full grid grid-cols-2 gap-[20px] lg:grid-cols-1 lg:max-w-[500px]">
-            {
-                docs["nosection"].map(doc => (
-                    <Card 
-                        title={doc.name}
-                        desc={doc.desc}
-                        type="document"
-                        href={doc.href}
-                    />
-                ))
-            }
-            {
-                docs["api"].map(doc => (
-                    <Card 
-                        title={doc.name}
-                        desc={doc.desc}
-                        type="document"
-                        href={doc.href}
-                    />
-                ))
-            } 
-        </div>
-        <h1 class="text-center text-[25px] font-bold">
-            Features
-        </h1>
-        <div class="grid grid-cols-2 gap-[20px] lg:grid-cols-1 lg:max-w-[500px]">
-            <Card 
-                title="Performance"
-                desc="GreenFrog provides a fast experience using the bedrock-protocol and a stable code built form scratch."
-                type="feature"
-            />
-            <Card 
-                title="Type Safe"
-                desc="By default, GreenFrog isn't type safe, but you can make it type safe by following the documentation steps using TypeScript."
-                type="feature"
-            />
-        </div>
-        <h1 class="text-center text-[25px] font-bold">
-            Contributors
-        </h1>
-        <div class="github-contributors flex flex-wrap max-w-[450px] pb-[30px] gap-[20px]" id="#contributors">
-            <contributor-card>
-                <h2>Loading...</h2>
-            </contributor-card>
-        </div>
-    </main>
+	<main>
+		<h1 class="text-center text-[25px] font-bold">Documentation</h1>
+		<div class="w-full grid grid-cols-2 gap-[20px] lg:grid-cols-1 lg:max-w-[500px]">
+			{
+				docs["nosection"].map((doc) => (
+					<Card title={doc.name} desc={doc.desc} type="document" href={doc.href} />
+				))
+			}
+			{
+				docs["api"].map((doc) => (
+					<Card title={doc.name} desc={doc.desc} type="document" href={doc.href} />
+				))
+			}
+		</div>
+		<h1 class="text-center text-[25px] font-bold">Features</h1>
+		<div class="grid grid-cols-2 gap-[20px] lg:grid-cols-1 lg:max-w-[500px]">
+			<Card
+				title="Performance"
+				desc="GreenFrog provides a fast experience using the bedrock-protocol and a stable code built from scratch."
+				type="feature"
+			/>
+			<Card
+				title="Type Safe"
+				desc="By default, GreenFrog isn't type safe, but you can make it type safe by following the documentation steps using TypeScript."
+				type="feature"
+			/>
+		</div>
+		<h1 class="text-center text-[25px] font-bold">Contributors</h1>
+		<div
+			class="github-contributors flex flex-wrap max-w-[450px] pb-[30px] gap-[20px]"
+			id="#contributors"
+		>
+			<contributor-card>
+				<h2>Loading...</h2>
+			</contributor-card>
+		</div>
+	</main>
 </Layout>

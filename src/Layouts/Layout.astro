@@ -1,47 +1,50 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ViewTransitions } from "astro:transitions"
 import "../styles/index.css"
 ---
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>GreenFrog: Minecraft Software</title>
-        <link rel="icon" href="/greenfrog.webp">
-        <script is:inline>
-        document.addEventListener('astro:page-load', () => {
-            const Lazy = target => {
-                const io = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(async entry => {
-                        if (entry.isIntersecting) {
-                            const req = await fetch(
-                                "https://api.github.com/repos/andriycraft/GreenFrogMCBE/contributors"
-                            )
-                            const contributors = await req.json()
-                            let DOMUpdate = ""
 
-                            contributors.forEach(contributor => {
-                                DOMUpdate += `
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>GreenFrog: Minecraft Software</title>
+		<link rel="icon" href="/greenfrog.webp" />
+		<link rel="prefetch" href="/greenfrogbg.webp" as="image" />
+		<link rel="preload" href="/greenfrogbg.webp" as="image" />
+		<script>
+			document.addEventListener("astro:page-load", () => {
+				const Lazy = (target) => {
+					const io = new IntersectionObserver((entries, observer) => {
+						entries.forEach(async (entry) => {
+							if (entry.isIntersecting) {
+								const req = await fetch(
+									"https://api.github.com/repos/GreenFrogMCBE/GreenFrogMCBEV2/contributors"
+								)
+								const contributors = await req.json()
+								let DOMUpdate = ""
+
+								contributors.forEach((contributor) => {
+									DOMUpdate += `
                                 <a href="${contributor.html_url}" target="_blank" class="contributor-card" rel="nofollow">
                                         <img src="${contributor.avatar_url}" alt="${contributor.login}'s github profile picture">
                                 </a>
                             `
-                            })
+								})
 
-                            document.querySelector(".github-contributors").innerHTML = DOMUpdate
-                        }
-                    })
-                })
-                io.observe(target)
-            }
+								document.querySelector(".github-contributors").innerHTML = DOMUpdate
+							}
+						})
+					})
+					io.observe(target)
+				}
 
-            document.querySelectorAll(".github-contributors").forEach(Lazy)
-        })
-        </script>
-        <ViewTransitions />
-    </head>
-    <body>
-        <slot />
-    </body> 
+				document.querySelectorAll(".github-contributors").forEach(Lazy)
+			})
+		</script>
+		<ViewTransitions />
+	</head>
+	<body>
+		<slot />
+	</body>
 </html>

@@ -1,66 +1,82 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ViewTransitions } from "astro:transitions"
 import Navigation from "../components/Navigation.astro"
 import json from "../stores/docs.json"
 import "../styles/index.css"
 const { frontmatter } = Astro.props
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenFrog: {frontmatter.title}</title>
-	<link rel="icon" href="/greenfrog.webp">
-    <script is:inline>
-        document.addEventListener('astro:page-load', () => {
-            const toggleSection = (element) => {
-                const allElements = document.querySelectorAll(element)
 
-                allElements.forEach(el => {
-                    if (el.style.display === 'none') {
-                        el.style.display = 'flex'
-                    } else {
-                        el.style.display = 'none'
-                    }
-                })
-            }
-            if (!document.querySelector('.apis')) return
-            document.querySelector('.apis').addEventListener('click', () => toggleSection('.api'))
-        }, { once: true })
-    </script>
-    <ViewTransitions />
-</head>
-<body>
-	<Navigation />
-    <div class="wrapper">
-        <aside transition:persist>
-                {
-                    json["nosection"]
-                        .map(item => (
-                            <a href={item.href} class={item.section}>
-                                {item.name}
-                            </a>
-                        ))
-                }
-                <button class="apis flex justify-center items-center w-full">
-                    <p class="w-full">
-                        API
-                    </p>
-                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="nx-h-[18px] nx-min-w-[18px] nx-rounded-sm nx-p-0.5 hover:nx-bg-gray-800/5 dark:hover:nx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                </button>
-                {
-                    json["api"]
-                        .map(item => (
-                            <a href={item.href} class={item.section} style="display: none">
-                                {item.name}
-                            </a>
-                        ))
-                }
-        </aside>
-        <main class="documentation">
-            <slot />
-        </main>
-    </div>
-</body>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>GreenFrog: {frontmatter.title}</title>
+		<link rel="icon" href="/greenfrog.webp" />
+		<script is:inline>
+			document.addEventListener(
+				"astro:page-load",
+				() => {
+					const toggleSection = (element) => {
+						const allElements = document.querySelectorAll(element)
+
+						allElements.forEach((el) => {
+							if (el.style.display === "none") {
+								el.style.display = "flex"
+							} else {
+								el.style.display = "none"
+							}
+						})
+					}
+					if (!document.querySelector(".apis")) return
+					document
+						.querySelector(".apis")
+						.addEventListener("click", () => toggleSection(".api"))
+				},
+				{ once: true }
+			)
+		</script>
+		<ViewTransitions />
+	</head>
+	<body>
+		<Navigation />
+		<div class="wrapper">
+			<aside transition:persist>
+				{
+					json["nosection"].map((item) => (
+						<a href={item.href} class={item.section}>
+							{item.name}
+						</a>
+					))
+				}
+				<button class="apis flex justify-center items-center w-full">
+					<p class="w-full">API</p>
+					<svg
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						class="nx-h-[18px] nx-min-w-[18px] nx-rounded-sm nx-p-0.5 hover:nx-bg-gray-800/5 dark:hover:nx-bg-gray-100/5"
+						><path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M9 5l7 7-7 7"></path></svg
+					>
+				</button>
+				{
+					json["api"].map((item) => (
+						<a href={item.href} class={item.section} style="display: none">
+							{item.name}
+						</a>
+					))
+				}
+			</aside>
+			<main class="documentation">
+				<div class="bg-red-700 p-[8px] border-red-400 border-l-4 font-semibold">
+					The documentation is outdated and does not apply to v2.0.0
+				</div>
+				<slot />
+			</main>
+		</div>
+	</body>
 </html>

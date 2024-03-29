@@ -1,3 +1,5 @@
+import animations from "@midudev/tailwind-animations"
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -10,5 +12,5 @@ module.exports = {
 			sm: { max: "639px" },
 		},
 	},
-	plugins: [],
+	plugins: [animations],
 }
